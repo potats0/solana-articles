@@ -1,3 +1,4 @@
+# 如何使用solana发币
 The SPL is similar to the Ethereum Request for Communication (ERC) standard on Ethereum。
 
 基本上solana已经给你提供好了发币的代码，你什么都不需要做，只需要输入命令即可，一键发币。如果是在以太坊发币，你需要继承自ERC20协议的接口，并自己写函数。但是在solana里，你什么都不需要做，接口等等都写好了。你只需要提供币的名称等就行。
