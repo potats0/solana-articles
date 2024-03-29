@@ -13,8 +13,10 @@ NewlyCreatedPairs.py的第34 35行
 
 核心api 
 
-https://solana.com/docs/rpc/websocket/logssubscribe 
-
+* 订阅API https://solana.com/docs/rpc/websocket/logssubscribe 
+* 获取trsacation https://solana.com/docs/rpc/http/gettransaction
+* trsacation 的数据结构 https://solana.com/docs/rpc/json-structures#transactions
+  
 流程图
 ```mermaid
 graph LR
