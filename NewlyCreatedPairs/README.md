@@ -8,6 +8,24 @@ NewlyCreatedPairs.py的第34 35行
 
 > 注意，不保证获取token的metadata实时可用。但目前而言，已经足够稳定了
 
+
+# 订阅新池子的信息的原理
+
+核心api 
+
+https://solana.com/docs/rpc/websocket/logssubscribe 
+
+流程图
+```mermaid
+graph LR
+  python --订阅感兴趣的公钥transaction事件--> sol[solana RPC]
+  sol --发现订阅到感兴趣的事件，发送给回调函数--> websocket[python 回调]
+  websocket --检索本次transaction的log，发现执行了我们想监控的instruction--> transaction 
+  transaction --解析调用交易的详细信息，对照process_initialize2解析数据-->  解析交易 --获取新创建池子信息-->信息
+```
+
+
+
 ```
 ============NEW POOL DETECTED====================
  Token_Index     │ Account Public Key 
